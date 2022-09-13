@@ -1,3 +1,47 @@
-#root {
-  color: red;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,500&display=swap');
+*{
+  background-color: rgb(144, 125, 185);
+  font-family: 'Roboto Flex', serif;
 }
+#search{
+  background-color: aliceblue;
+  padding: 10px;
+
+}
+#root {
+   color: rgb(0, 0, 0);
+/* display: grid;
+grid-template-columns: auto auto auto;
+justify-content: space-between;  */
+}
+/* 
+
+h1 {
+ color:rgb(255, 255, 255);
+ font-size:x-large;
+ text-align: center;
+ font-weight: bold;
+ 
+ 
+}
+p {
+  color: aliceblue;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 18px;
+}
+
+.episodes{
+ border: 3px solid rgb(180, 127, 194);
+ padding: 10px;
+ margin: 2px;
+ background-color: black;
+}
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}  */
