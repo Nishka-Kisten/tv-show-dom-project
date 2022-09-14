@@ -1,47 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,500&display=swap');
-*{
-  background-color: rgb(144, 125, 185);
+
+#root{
+  color: red;
+}
+
+/* 
+ *{
+ background-color: rgb(0, 0, 0);
   font-family: 'Roboto Flex', serif;
 }
 #search{
-  background-color: aliceblue;
-  padding: 10px;
+  
+  box-shadow: 0px 2px 8px #ffffff;
+  padding:10px 60px 10px 10px;
+  display:none; 
+ float: right;
+margin: 8px 0;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
 
 }
-#root {
-   color: rgb(0, 0, 0);
-/* display: grid;
-grid-template-columns: auto auto auto;
-justify-content: space-between;  */
+input[type="search"]:focus {
+  outline: none;
+  box-shadow: 0px 2px 8px #ffffff;
+   border:1px solid #fafafa; 
+  color: aliceblue;
+  background-color: rgb(255, 239, 239);
 }
-/* 
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
 
 h1 {
- color:rgb(255, 255, 255);
- font-size:x-large;
- text-align: center;
- font-weight: bold;
- 
- 
+  color:rgb(141, 36, 36);
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  background:linear-gradient(to right, rgba(255,0,0,0), rgb(243, 243, 243),  rgba(255,0,0,0)) ;
+ padding: 7px;
+  
+  
+ }
+#root {
+   color: rgb(0, 0, 0);
+display: grid;
+grid-template-columns: 2fr 2fr 2fr;
+justify-content: space-between; 
+gap: 8px;
+margin: 5px;
 }
+ 
+
 p {
   color: aliceblue;
   text-align: center;
-  padding-top: 5px;
-  font-size: 18px;
+  padding: 6px;
+  font-size: 17px;
+  background-color:rgb(0, 0, 0);
 }
 
-.episodes{
- border: 3px solid rgb(180, 127, 194);
+.episode {
+ background-color:rgb(0, 0, 0);
  padding: 10px;
- margin: 2px;
- background-color: black;
+ margin: 5px 5px;
+ border-radius: 3%;
+  box-shadow: rgba(255, 255, 255, 0.4) 5px 5px, rgba(209, 194, 204, 0.3) 10px 10px, rgba(128, 122, 126, 0.2) 15px 15px;
 }
-
+option {
+  color: aliceblue; 
+}
 img{
   display: block;
   margin-left: auto;
   margin-right: auto;
+padding-top: 10px;
 
-}  */
+background-color:rgb(0, 0, 0);
+}  
+
+#dropdwn {
+  position: relative;
+  display: inline-block;
+    
+   border-width: 2px;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 5px;
+  color: aliceblue;
+  background-color: black;
+  box-shadow: 0px 0px 5px #ffffff;
+
+}
+ 
+#display{
+font-size: 20px;
+margin: 15px;
+color: aliceblue;
+
+}     */
