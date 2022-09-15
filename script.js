@@ -113,7 +113,7 @@ select.addEventListener('click', (e) => {
 })  //displays episode depending on what option is picked
  if(opt == ""){ 
   displayNum.innerText = `Displaying ${allEpisodes.length}/${allEpisodes.length} episodes.`
-  return   rootElem.innerHTML += display();
+  return   rootElem.innerHTML = display();
   } else {
   displayNum.innerText = `Displaying ${opt.length}/${allEpisodes.length} episodes.`
   return rootElem.innerHTML = 
