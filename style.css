@@ -33,11 +33,11 @@ input[type="search"]:focus {
 }
 
 h1 {
-  color:rgb(0, 0, 0);
+  color:rgba(255, 255, 255, 0.813);
   font-size: 16px;
   text-align: center;
   font-weight: bold;
-  background:linear-gradient(to right, rgba(255,0,0,0), rgb(243, 243, 243),  rgba(255,0,0,0)) ;
+  background:linear-gradient(to right, rgba(48, 18, 218, 0.043), rgb(32, 2, 204),  rgba(21, 0, 255, 0.043)) ;
  padding: 7px;
   
   
@@ -65,7 +65,7 @@ p {
  padding: 10px;
  margin: 5px 5px;
  border-radius: 3%;
-  box-shadow: rgba(255, 255, 255, 0.4) 5px 5px, rgba(209, 194, 204, 0.3) 10px 10px, rgba(128, 122, 126, 0.2) 15px 15px;
+  box-shadow: rgb(93, 1, 252) 5px 5px, rgba(43, 0, 255, 0.3) 10px 10px, rgba(7, 48, 255, 0.2) 15px 15px;
 }
 option {
   color: aliceblue; 
