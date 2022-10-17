@@ -63,6 +63,7 @@ selectSeries.addEventListener('click', (e) => {
       if(filteredArr == ""){ 
       console.log("working");
      } else {
+      select.innerHTML = "";
     let url = `https://api.tvmaze.com/shows/${SHOW_ID}/episodes`;
     getEpData(url);
     }
@@ -134,7 +135,8 @@ function searchBar(data){
         
 select.addEventListener('click', (e) => {
  let selectedOption = e.target.value; //displays episode depending on what option is picked
-  opt = data.filter((ep) => {return  ep.id == selectedOption }); 
+  opt = data.filter((ep) => {
+    return  ep.id == selectedOption }); 
  if(opt == ""){ 
   displayEp(data);
   } else {
