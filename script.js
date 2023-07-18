@@ -1,6 +1,6 @@
 let body = document.querySelector('body');
-const rootElem = document.getElementById("root"); // main div wiShows
-  let allEpisodes = getAllEpisodes();  //get data from function
+const rootElem = document.getElementById("root"); // main div w\\
+  // let allEpisodes = getAllEpisodes();  //get data from function
 
   let selectSeries = document.createElement('select'); // create dropdown for series
   selectSeries.id= "dropdwnSeries";
@@ -41,8 +41,8 @@ let length = allShows.length;
 let shows =[];
   //Creating array of data needed
  for(let i=0; i<length; i++){
-let g = { name:`${allShows[i].name}`, id: `${allShows[i].id}` }; 
-shows.push(g);
+let g = { name:`${allShows[i].name}`, id: `${allShows[i].id}` }; //becomes obj with name and id keys
+shows.push(g); //push objects to array
 }
 const arr = shows.sort(function(a, b) {
   var nameA = a.name.toUpperCase(); // ignore upper and lowercase
@@ -56,14 +56,15 @@ const arr = shows.sort(function(a, b) {
   return 0;  // names must be equal
 });
 
-selectSeries.addEventListener('click', (e) => {
+selectSeries.addEventListener('click', (e) => { //series drop down
     let targetedShow = e.target.value;
-      var filteredArr = arr.filter((show) => { return show.id.includes(targetedShow)});   
+    // console.log(targetedShow)
+      var filteredArr = arr.filter((show) => { return show.id.includes(targetedShow)});   //arr of series names
       let SHOW_ID =  targetedShow;
       if(filteredArr == ""){ 
       console.log("working");
      } else {
-      select.innerHTML = "";
+      select.innerHTML = ""; //*****    creates ep dropdown
     let url = `https://api.tvmaze.com/shows/${SHOW_ID}/episodes`;
     getEpData(url);
     }
@@ -93,7 +94,7 @@ window.onload = setup;
    )}
  
      function displayEp(data){
-    displayNum.innerText = `displaying ${data.length}/${data.length} episodes.`;
+    displayNum.innerText = `displaying ${data.length}/${data.length} episodes.`;  //***** 
     const results = data.map(ep => { 
       prepended_out = ("0" + ep.season ).slice(-2);
       prepended_out2 = ("0" + ep.number ).slice(-2);
@@ -114,19 +115,19 @@ window.onload = setup;
   }
 
 function searchBar(data){
-  search.addEventListener('keyup', (e) => {
+  search.addEventListener('keyup', (e) => {  
     const searchString = e.target.value.toLowerCase(); //value typed
     const filteredEp = data.filter((ep) => {
-        return (  
-          ep.name.toLowerCase().includes(searchString) || 
-         ep.summary.toLowerCase().includes(searchString)
+        return (   
+          ep.name.toLowerCase().includes(searchString) ||  //val typed included in name
+         ep.summary.toLowerCase().includes(searchString) //val typed included in summary
         )}); 
        displayEp(filteredEp);
       })
 }
 
-  async function makeDropDown(data){
-  let dropDown = data.map(ep => {//displays all episode names in dropdown
+ function makeDropDown(data){
+  let dropDown = data.map(ep => {   //displays all episode names in dropdown
   prepended_out = ( "0" + ep.season ).slice(-2);
   prepended_out2 = ( "0" + ep.number ).slice(-2);
     return `<option value="${ep.id}"> S${prepended_out}E${prepended_out2}- ${ep.name}</option>`

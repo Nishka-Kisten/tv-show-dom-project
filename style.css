@@ -10,11 +10,11 @@
   font-family: 'Roboto Flex', serif;
 }
 #search{
-  box-shadow: 0px 2px 8px #ffffff;
+  box-shadow: 0px 2px 8px  #ffffff;
   padding:10px 60px 10px 10px;
  float: right;
 margin: 8px 0;
-border: 1px solid #ccc;
+border: 1px solid  #ccc;
 border-radius: 4px;
 box-sizing: border-box;
 
@@ -33,11 +33,11 @@ input[type="search"]:focus {
 }
 
 h1 {
-  color:rgba(255, 255, 255, 0.813);
+  color:rgb(0, 0, 0);
   font-size: 16px;
   text-align: center;
   font-weight: bold;
-  background:linear-gradient(to right, rgba(48, 18, 218, 0.043), rgb(32, 2, 204),  rgba(21, 0, 255, 0.043)) ;
+  background:linear-gradient(to right, rgba(255,0,0,0), rgb(243, 243, 243),  rgba(255,0,0,0)) ;
  padding: 7px;
   
   
@@ -65,8 +65,8 @@ p {
  padding: 10px;
  margin: 5px 5px;
  border-radius: 3%;
-  box-shadow: rgb(93, 1, 252) 5px 5px, rgba(43, 0, 255, 0.3) 10px 10px, rgba(7, 48, 255, 0.2) 15px 15px;
-}
+  box-shadow: rgba(255, 255, 255, 0.4) 5px 5px, rgba(209, 194, 204, 0.3) 10px 10px, rgba(128, 122, 126, 0.2) 15px 15px;
+} 
 option {
   color: aliceblue; 
 }
@@ -82,6 +82,7 @@ background-color:rgb(0, 0, 0);
 #dropdwn, #dropdwnSeries {
   position: relative;
   display: inline-block;
+  border: #ccc;
    border-width: 2px;
   border-radius: 10px;
   font-size: 18px;
@@ -89,7 +90,7 @@ background-color:rgb(0, 0, 0);
   margin-right: 20px;
   color: aliceblue;
   background-color: black;
-  box-shadow: 0px 0px 5px #ffffff;
+  box-shadow: 5px 5px 8px  #ffffff;
 
 }
  
