@@ -111,22 +111,19 @@ function displayEp(data) {
   displayNum.innerText = `Displaying ${data.length}/${data.length} episodes.`; //*****
   const results = data
     .map((ep) => {
-      prepended_out = ("0" + ep.season).slice(-2);
-      prepended_out2 = ("0" + ep.number).slice(-2);
-      if (ep.image == null) {
-        return `
-        <div class="episode" id="${ep.id}">
-        <h1>${ep.name} S${prepended_out}E${prepended_out2}</h1>
-          ${ep.summary}
-         </div> `;
-      } else {
-        return `
-        <div class="episode" id="${ep.id}">
-        <h1>${ep.name} S${prepended_out}E${prepended_out2}</h1>
-        <img src="${ep.image.medium}"></img>
-          ${ep.summary}
-         </div> `;
-      }
+      seasonNum = ("0" + ep.season).slice(-2);
+      episodeNum = ("0" + ep.number).slice(-2);
+
+      // fallbacks for null
+      let imgSrc = ep.image?.medium || "placeholder.jpg";
+      let summaryText = ep.summary || "<p>No summary available.</p>";
+
+      return `
+      <div class="episode" id="${ep.id}">
+        <h1>${ep.name} S${seasonNum}E${episodeNum}</h1>
+        <img src="${imgSrc}" alt="${ep.name}">
+        ${summaryText}
+      </div>`;
     })
     .join("");
   rootElem.innerHTML = results;
@@ -136,9 +133,13 @@ function searchBar(data) {
   search.addEventListener("keyup", (e) => {
     const searchString = e.target.value.toLowerCase(); //value typed
     const filteredEp = data.filter((ep) => {
+      //in the case of null
+      const nameText = (ep.name || "").toLowerCase();
+      const summaryText = (ep.summary || "").toLowerCase();
+
       return (
-        ep.name.toLowerCase().includes(searchString) || //val typed included in name
-        ep.summary.toLowerCase().includes(searchString) //val typed included in summary
+        nameText.includes(searchString) || //val typed included in name
+        summaryText.includes(searchString) //val typed included in summary
       );
     });
     displayEp(filteredEp);
