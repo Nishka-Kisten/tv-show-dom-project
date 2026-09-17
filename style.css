@@ -113,7 +113,6 @@ background-color: rgb(235, 235, 235);
   background-color:rgb(71, 71, 71);
   transition: background-color 0.5s ease;
   transform: translateY(-5px) scale(1.02);
-  /* box-shadow: 0 0 10px #74b9ff; */
    box-shadow: rgba(255, 252, 252, 0.4) 5px 5px, #0100014d 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px;
 }
 .highlight h1 {
@@ -122,6 +121,11 @@ background-color: rgb(235, 235, 235);
 }
 
 .highlight p {
+  color: rgb(235, 235, 235);
+  background-color:rgb(71, 71, 71);
+}
+
+.highlight img {
   color: rgb(235, 235, 235);
   background-color:rgb(71, 71, 71);
 }
